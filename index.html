@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <base target="_top">
+    <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+  <form action="<?= url ?>" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<?= stripePublishableKey?>"
+    data-amount="1000"
+    data-currency='jpy'
+    data-name="決済するよ"
+    data-description="決済"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+  <input type="hidden" name="responseId" value="<?= responseId?>">
+  </form>
+  </body>
+</html>
